@@ -1,0 +1,14 @@
+{
+  "modules": {
+    "autoupdate": {},
+    "compat": {},
+    "git": {}
+  },
+  "plugin_author": "J\u00f6rn Lund",
+  "plugin_author_uri": "",
+  "plugin_name": "Gitish Updated",
+  "plugin_namespace": "GitishUpdated",
+  "plugin_slug": "gitish_updated",
+  "this_year": 2018,
+  "wp_plugin_slug": "gitish-updated"
+}
