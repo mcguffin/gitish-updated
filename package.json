@@ -1,0 +1,39 @@
+{
+  "name": "gitish-updated",
+  "version": "0.0.1",
+  "description": "testing mcguffin/wporg-release",
+  "private": true,
+  "scripts": {
+    "dev": "gulp dev",
+    "build": "gulp build && npm run i18n",
+    "i18n": "wp i18n make-pot . languages/acf-wp-objects.pot --domain=acf-wp-objects",
+    "rollback": "git reset --hard HEAD~ && git push origin +master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcguffin/acf-wp-objects.git"
+  },
+  "author": "Jörn Lund",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mcguffin/acf-wp-objects/issues"
+  },
+  "homepage": "https://github.com/mcguffin/acf-wp-objects#readme",
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "*",
+    "gulp-concat": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "*"
+  },
+  "engines": {
+    "node": "12.4.0",
+    "npm": "^6.9.0"
+  }
+}
