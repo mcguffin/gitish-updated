@@ -35,24 +35,5 @@
   "engines": {
     "node": "12.4.0",
     "npm": "^6.9.0"
-  },
-  "wporg": {
-    "type": "plugin",
-    "steps": [
-      "build",
-      "github"
-    ],
-    "build": {
-      "prebuild": [
-        "wp i18n make-pot . languages/gitish-updated.pot --domain=gitish-updated"
-      ],
-      "build": [
-        "gulp build"
-      ]
-    },
-    "github": {
-      "user": "mcguffin",
-      "host": "github.com"
-    }
   }
 }
