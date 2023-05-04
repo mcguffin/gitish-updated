@@ -23,19 +23,17 @@
     "last 2 versions"
   ],
   "devDependencies": {
-    "gulp": "^4.0.2",
+    "gulp": "*",
     "gulp-autoprefixer": "*",
     "gulp-concat": "*",
     "gulp-rename": "*",
     "gulp-sass": "*",
     "gulp-sourcemaps": "*",
     "gulp-uglify": "*",
-    "gulp-util": "*"
+    "gulp-util": "*",
+    "sass": "*"
   },
-  "engines": {
-    "node": "12.4.0",
-    "npm": "^6.9.0"
-  },
+  "engines": {},
   "wporg": {
     "steps": [
       "build",
