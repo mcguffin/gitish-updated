@@ -8,3 +8,4 @@ package*.json export-ignore
 /tmp export-ignore
 wp-plugin-boilerplate.json export-ignore
 .wporg export-ignore
+.wp-release-info.json export-ignore

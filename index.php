@@ -8,10 +8,9 @@ Author: Jörn Lund
 Version: 0.0.30
 Author URI: https://github.com/mcguffin
 License: GPL3
-Github Repository: mcguffin/gitish-updated
-GitHub Plugin URI: mcguffin/gitish-updated
 Text Domain: gitish-updated
 Domain Path: /languages/
+Update URI: https://github.com/mcguffin/gitish-updated/raw/master/.wp-release-info.json
 */
 
 /*  Copyright 2018 Jörn Lund
