@@ -21,7 +21,6 @@ class Core extends Plugin {
 	protected function __construct() {
 
 		add_action( 'plugins_loaded' , array( $this , 'load_textdomain' ) );
-		add_action( 'plugins_loaded' , array( $this , 'init_compat' ), 0 );
 		add_action( 'init' , array( $this , 'init' ) );
 
 		add_action( 'wp_enqueue_scripts' , array( $this , 'wp_enqueue_style' ) );
@@ -38,32 +37,13 @@ class Core extends Plugin {
 	public function wp_enqueue_style() {
 	}
 
-
-	/**
-	 *	Load Compatibility classes
-	 *
-	 *  @action plugins_loaded
-	 */
-	public function init_compat() {
-		if ( is_multisite() && is_plugin_active_for_network( $this->get_wp_plugin() ) ) {
-			Compat\WPMU::instance();
-		}
-		if ( function_exists('\acf') && version_compare( acf()->version,'5.0.0','>=') ) {
-			Compat\ACF::instance();
-		}
-		if ( defined('POLYLANG_VERSION') && version_compare( POLYLANG_VERSION, '1.0.0', '>=' ) ) {
-			Compat\Polylang::instance();
-		}
-	}
-
-
 	/**
 	 *	Load text domain
 	 *
 	 *  @action plugins_loaded
 	 */
 	public function load_textdomain() {
-		$path = pathinfo( $this->plugin_file(), PATHINFO_FILENAME );
+		$path = pathinfo( $this->get_plugin_file(), PATHINFO_FILENAME );
 		load_plugin_textdomain( 'gitish-updated', false, $path . '/languages' );
 	}
 
@@ -82,7 +62,7 @@ class Core extends Plugin {
 	 *	@return wp_enqueue_editor
 	 */
 	public function get_asset_url( $asset ) {
-		return plugins_url( $asset, $this->plugin_file() );
+		return plugins_url( $asset, $this->get_plugin_file() );
 	}
 
 

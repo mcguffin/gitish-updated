@@ -1,9 +1,9 @@
 {
   "id": "https://github.com/mcguffin/gitish-updated/raw/master/.wp-release-info.json",
   "slug": "gitish-updated",
-  "version": "0.0.31",
+  "version": "0.1.0",
   "url": "http://wordpress.org/",
-  "package": "https://github.com/mcguffin/gitish-updated/releases/download/0.0.31/gitish-updated.zip",
+  "package": "https://github.com/mcguffin/gitish-updated/releases/download/0.1.0/gitish-updated.zip",
   "tested": "4.9",
   "requires_php": "5.3"
 }

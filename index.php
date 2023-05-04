@@ -5,7 +5,7 @@ Plugin Name: Gitish Updated
 Plugin URI: http://wordpress.org/
 Description: Enter description here.
 Author: Jörn Lund
-Version: 0.0.30
+Version: 0.1.0
 Author URI: https://github.com/mcguffin
 License: GPL3
 Text Domain: gitish-updated
@@ -45,7 +45,7 @@ if ( ! defined('ABSPATH') ) {
 
 require_once plugin_dir_path(__FILE__) . 'include/autoload.php';
 
-// Core\Core::instance( __FILE__ );
+Core\Core::instance( __FILE__ );
 
 
 add_filter( 'update_plugins_github.com', function( $update, $plugin_data, $plugin_file, $locales ) {
