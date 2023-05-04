@@ -5,7 +5,7 @@ Plugin Name: Gitish Updated
 Plugin URI: http://wordpress.org/
 Description: Enter description here.
 Author: Jörn Lund
-Version: 0.1.0
+Version: 0.1.1
 Author URI: https://github.com/mcguffin
 License: GPL3
 Text Domain: gitish-updated
