@@ -3,6 +3,12 @@ Gitish Updated
 
 #### Developer info here. ####
 
+>[!WARNING]
+>This is a warning
+
+
+>[!ERROR]
+>This is an error
 
 Installation
 ------------
