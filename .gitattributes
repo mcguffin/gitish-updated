@@ -9,3 +9,4 @@ package*.json export-ignore
 wp-plugin-boilerplate.json export-ignore
 .wporg export-ignore
 .wp-release-info.json export-ignore
+.editorconfig export-ignore
