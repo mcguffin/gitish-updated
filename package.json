@@ -42,6 +42,7 @@
     ],
     "type": "plugin",
     "build": {
+      "versionedFiles": null,
       "prebuild": [
         "wp i18n make-pot . languages/gitish-updated.pot --domain=gitish-updated"
       ],

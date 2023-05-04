@@ -3,7 +3,7 @@ var concat = require('gulp-concat');
 var gulp = require('gulp');
 var gulputil = require('gulp-util');
 var rename = require('gulp-rename');
-var sass = require('gulp-sass');
+var sass = require('gulp-sass')(require('sass'));
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
 

@@ -45,10 +45,23 @@ if ( ! defined('ABSPATH') ) {
 
 require_once plugin_dir_path(__FILE__) . 'include/autoload.php';
 
-Core\Core::instance( __FILE__ );
+// Core\Core::instance( __FILE__ );
 
 
+add_filter( 'update_plugins_github.com', function( $update, $plugin_data, $plugin_file, $locales ) {
 
+	if ( ! preg_match( "@{$plugin_file}$@", __FILE__ ) ) { // not our plugin
+		return $update;
+	}
+
+	$response = wp_remote_get( $plugin_data['UpdateURI'] );
+
+	if ( is_wp_error( $response ) || wp_remote_retrieve_response_code( $response ) > 200 ) { // response error
+		return $update;
+	}
+
+	return json_decode( wp_remote_retrieve_body( $response ), true, 512 );
+}, 10, 4 );
 
 
 
@@ -67,7 +80,7 @@ if ( is_admin() || defined( 'DOING_AJAX' ) ) {
 
 		if ( ! in_array( 'github-updater/github-updater.php', $active_plugins ) ) {
 			// not github updater. Init our our own...
-			AutoUpdate\AutoUpdateGithub::instance();
+			// AutoUpdate\AutoUpdateGithub::instance();
 		}
 	}
 
@@ -76,4 +89,3 @@ if ( is_admin() || defined( 'DOING_AJAX' ) ) {
 
 
 }
-
